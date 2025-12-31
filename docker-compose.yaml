@@ -1,0 +1,9 @@
+services:
+  dev:
+    build: .
+    volumes:
+      - .:/workspace
+    # wrapper for networking capabilities (tcpdump, etc.)
+    cap_add:
+      - NET_ADMIN
+    tty: true
